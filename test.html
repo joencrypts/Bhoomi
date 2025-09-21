@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhoomi Test Page</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Bhoomi Project Test</h1>
+        <p>This is a test page to verify all dependencies are working correctly.</p>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h3>JavaScript Dependencies Test</h3>
+                <button id="testBtn" class="btn btn-primary">Test jQuery</button>
+                <div id="testResult" class="mt-2"></div>
+            </div>
+            <div class="col-md-6">
+                <h3>CSS Test</h3>
+                <div class="alert alert-success">Bootstrap CSS is working!</div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Test</h5>
+                        <p class="card-text">This card should be styled properly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <h3>Image Loading Test</h3>
+            <img src="images/white.png" alt="Logo" class="img-fluid" style="max-width: 200px;">
+        </div>
+    </div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#testBtn').click(function() {
+                $('#testResult').html('<div class="alert alert-success">jQuery is working correctly!</div>');
+            });
+            
+            // Test if all required libraries are loaded
+            if (typeof $ !== 'undefined') {
+                console.log('jQuery loaded successfully');
+            }
+            if (typeof Swiper !== 'undefined') {
+                console.log('Swiper loaded successfully');
+            }
+        });
+    </script>
+</body>
+</html>

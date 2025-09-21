@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<!-- Mirrored from madebydesignesia.com/themes/Bhoomi/shop-shop-all.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Sep 2025 21:33:53 GMT -->
+<head>
+    <title>Bhoomi — Plants Store</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta content="Bhoomi — Plants Store" name="description" >
+    <meta content="" name="keywords" >
+    <meta content="" name="author" >
+    <!-- CSS Files
+    ================================================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css" >
+    <link href="css/swiper.css" rel="stylesheet" type="text/css" >
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" >
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <a href="#" id="back-to-top"></a>
+
+        <!-- preloader begin -->
+        <div id="de-loader"></div>
+        <!-- preloader end -->
+
+        <!-- header begin -->
+        <header class="header-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="shop-homepage.html">
+                                        <img class="logo-main" src="images/logo-black.png" alt="" >
+                                        <img class="logo-scroll" src="images/logo-black.png" alt="" >
+                                        <img class="logo-mobile" src="images/white.png" alt="" >
+                                    </a>
+                                </div>
+                                <!-- logo end -->
+                            </div>
+                            <div class="de-flex-col header-col-mid">
+                                <!-- mainemenu begin -->
+                                <ul id="mainmenu">
+                                    <li><a class="menu-item" href="shop-homepage.html">Home</a></li>
+                                    <li><a class="menu-item" href="shop-catalog.html">Catalog</a></li>
+                                    <li><a class="menu-item" href="shop-shop-all.html">Shop All</a></li>
+                                    
+                                    <li><a class="menu-item" href="shop-contact.html">Contact Us</a></li>
+                                </ul>
+                                <!-- mainmenu end -->
+                            </div>
+                            <div class="de-flex-col">
+                                <input type="text" name="Name" id="name" class="de-quick-search ms-3 w-100 rounded-20" placeholder="search...">
+
+                                <a class="de-icon-counter" href="#">
+                                    <div class="d-counter">0</div>
+                                    <img src="images/ui/heart.svg" class="" alt="">
+                                </a>
+
+                                <div id="btn-cart" class="de-icon-counter">
+                                    <div class="d-counter">5</div>
+                                    <img src="images/ui/cart.svg" class="" alt="">
+                                </div>                                
+
+                                <span id="menu-btn"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+
+            <div id="top"></div>
+
+        <section id="subheader" class="relative bg-light">
+            <div class="container relative z-index-1000">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="crumb">
+                            <li><a href="shop-homepage.html">Home</a></li>
+                            <li class="active">Shop All</li>
+                        </ul>
+                        <h1 class="text-uppercase">Shop All</h1>
+                        <p class="col-lg-10 lead">Transform Your Garden into a Personal Paradise!</p>
+                    </div>
+                </div>
+            </div>
+            <img src="images/logo-wm.webp" class="abs end-0 bottom-0 z-2 w-20" alt="">
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <div class="item_filter_group">
+                            <h4>Price ($)</h4>
+                              <div class="price-input">
+                                <div class="field">
+                                  <span>Min</span>
+                                  <input type="number" class="input-min" value="0">
+                                </div>
+                                <div class="field">
+                                  <span>Max</span>
+                                  <input type="number" class="input-max" value="1000">
+                                </div>
+                              </div>
+                              <div class="slider">
+                                <div class="progress"></div>
+                              </div>
+                              <div class="range-input">
+                                <input type="range" class="range-min" min="0" max="2000" value="0" step="1">
+                                <input type="range" class="range-max" min="0" max="2000" value="2000" step="1">
+                              </div>
+                        </div>
+
+                        <div class="item_filter_group">
+                            <h4>Categories</h4>
+                            <div class="de_form">
+                                <div class="de_checkbox">
+                                    <input id="cat_1" name="cat_1" type="checkbox" value="cat_1">
+                                    <label for="cat_1">House Plants</label>
+                                </div>
+
+                                <div class="de_checkbox">
+                                    <input id="cat_2" name="cat_2" type="checkbox" value="cat_2">
+                                    <label for="cat_2">Potter Plants</label>
+                                </div>
+
+                                <div class="de_checkbox">
+                                    <input id="cat_3" name="cat_3" type="checkbox" value="cat_3">
+                                    <label for="cat_3">Small Plants</label>
+                                </div>
+
+                                <div class="de_checkbox">
+                                    <input id="cat_4" name="cat_4" type="checkbox" value="cat_4">
+                                    <label for="cat_4">Medium Plants</label>
+                                </div>
+
+                                <div class="de_checkbox">
+                                    <input id="cat_5" name="cat_5" type="checkbox" value="cat_5">
+                                    <label for="cat_5">Big Plants</label>
+                                </div>
+
+                                <div class="de_checkbox">
+                                    <input id="cat_6" name="cat_6" type="checkbox" value="cat_6">
+                                    <label for="cat_6">Seeds</label>
+                                </div>
+
+                                <div class="de_checkbox">
+                                    <input id="cat_7" name="cat_7" type="checkbox" value="cat_7">
+                                    <label for="cat_7">Terariums</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="item_filter_group">
+                            <h4>Color</h4>
+                            <div class="de_form">
+                                <div class="de_checkbox">
+                                    <input id="color_1" name="color_1" type="checkbox" value="color_1">
+                                    <label for="color_1">Black</label>
+                                </div>
+
+                                <div class="de_checkbox">
+                                    <input id="color_2" name="color_2" type="checkbox" value="color_2">
+                                    <label for="color_2">White</label>
+                                </div>
+
+                                <div class="de_checkbox">
+                                    <input id="color_3" name="color_3" type="checkbox" value="color_3">
+                                    <label for="color_3">Grey</label>
+                                </div>
+
+                                <div class="de_checkbox">
+                                    <input id="color_4" name="color_4" type="checkbox" value="color_4">
+                                    <label for="color_4">Brown</label>
+                                </div>
+
+                                <div class="de_checkbox">
+                                    <input id="color_4" name="color_4" type="checkbox" value="color_4">
+                                    <label for="color_4">Red</label>
+                                </div>
+
+                                <div class="de_checkbox">
+                                    <input id="color_4" name="color_4" type="checkbox" value="color_4">
+                                    <label for="color_4">Yellow</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9">
+                        <div class="row g-4">
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/peace-lily-s.webp">
+                                            <img class="atr__image-hover" src="images/shop/plants/peace-lily-m.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>Peace Lily Plant</h3>
+                                    <div class="atr__main-price">
+                                        $195.00
+                                    </div>
+
+                                    <div class="atr__opt">
+                                        <div class="atr__opt-1 active" data-image="images/shop/plants/peace-lily-s.webp">S</div>
+                                        <div class="atr__opt-2" data-image="images/shop/plants/peace-lily-m.webp">M</div>
+                                        <div class="atr__opt-3" data-image="images/shop/plants/peace-lily-l.webp">L</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->
+
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/plastic-pot-1.webp">
+                                            <img class="atr__image-hover full" src="images/shop/plants/plastic-pot-hover.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>Plastic Pot</h3>
+                                    <div class="atr__main-price">
+                                        $20.00
+                                    </div>
+
+                                    <div class="atr__colors">
+                                        <div class="atr__color-1 active" data-image="images/shop/plants/plastic-pot-1.webp"><span data-bgcolor="#C4DBCC"></span></div>
+                                        <div class="atr__color-2" data-image="images/shop/plants/plastic-pot-2.webp"><span data-bgcolor="#BDC788"></span></div>
+                                        <div class="atr__color-3" data-image="images/shop/plants/plastic-pot-3.webp"><span data-bgcolor="#c29dc0"></span></div>
+                                        <div class="atr__color-3" data-image="images/shop/plants/plastic-pot-4.webp"><span data-bgcolor="#e0e0e0"></span></div>
+                                        <div class="atr__color-3" data-image="images/shop/plants/plastic-pot-5.webp"><span data-bgcolor="#505050"></span></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->
+
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/aglonema.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>Aglonema Plant</h3>
+                                    <div class="atr__main-price">
+                                        $195.00
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->
+
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/jade-mini.webp">
+                                            <img class="atr__image-hover" src="images/shop/plants/jade-mini.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>Jade Plant Mini</h3>
+                                    <div class="atr__main-price">
+                                        $195.00
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->
+
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/monstera-deliciosa.webp">
+                                            <img class="atr__image-hover" src="images/shop/plants/monstera-deliciosa.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>Monstera Deliciosa Plant</h3>
+                                    <div class="atr__main-price">
+                                        $195.00
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->                                    
+
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/anthurium-red.webp">
+                                            <img class="atr__image-hover" src="images/shop/plants/anthurium-red.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>Anthurium Red Plant</h3>
+                                    <div class="atr__main-price">
+                                        $195.00
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->
+
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/snake-plant.webp">
+                                            <img class="atr__image-hover" src="images/shop/plants/snake-plant.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>Snake Plant</h3>
+                                    <div class="atr__main-price">
+                                        $195.00
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->
+
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/calathea-sanderiana.webp">
+                                            <img class="atr__image-hover" src="images/shop/plants/calathea-sanderiana.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>Calathea Sanderiana</h3>
+                                    <div class="atr__main-price">
+                                        $195.00
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->
+
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/zz-plant.webp">
+                                            <img class="atr__image-hover" src="images/shop/plants/zz-plant.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>ZZ Plant</h3>
+                                    <div class="atr__main-price">
+                                        $195.00
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->
+
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/lemon-grass.webp">
+                                            <img class="atr__image-hover" src="images/shop/plants/lemon-grass.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>Lemon Grass Plant</h3>
+                                    <div class="atr__main-price">
+                                        $195.00
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->
+
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/ficus-lyrata.webp">
+                                            <img class="atr__image-hover" src="images/shop/plants/ficus-lyrata.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>Ficus Lyrata Plant</h3>
+                                    <div class="atr__main-price">
+                                        $195.00
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->
+
+                            <!-- product item begin -->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="de__pcard text-center">
+                                    <div class="atr__images">
+                                        <div class="atr__promo">
+                                            Sale
+                                        </div>
+                                        <a href="shop-product-single.html">
+                                            <img class="atr__image-main" src="images/shop/plants/aloe-vera-mini.webp">
+                                            <img class="atr__image-hover" src="images/shop/plants/aloe-vera-mini.webp">
+                                        </a>
+                                        <div class="atr__extra-menu">
+                                            <a class="atr__quick-view" href="shop-product-single.html"><i class="icon_zoom-in_alt"></i></a>
+                                            <div class="atr__add-cart"><i class="icon_cart_alt"></i></div>
+                                            <div class="atr__wish-list"><i class="icon_heart_alt"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="de-rating-ext">
+                                        <span class="d-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+
+                                    <h3>Aloe Vera Mini Plant</h3>
+                                    <div class="atr__main-price">
+                                        $195.00
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- product item end -->
+
+                            <div class="col-lg-12 pt-4 text-center">
+                                <div class="d-inline-block">
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination">
+                                        <li class="page-item">
+                                          <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
+                                          </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+            
+
+    </div>
+    <!-- content end -->
+    
+    <!-- footer begin -->
+    <footer class="section-dark">
+        <div class="container relative z-2">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-sm-6">
+                    <img src="images/white.png" class="w-150px" alt="" >
+                    <div class="spacer-20"></div>
+                    <p>Transform your outdoor space with our expert garden services! From design to maintenance, we create beautiful, thriving gardens tailored to your vision. Let us bring your dream garden to life—professional, reliable, and passionate about nature.</p>
+
+                    <div class="social-icons mb-sm-30">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 order-lg-1 order-sm-2">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="widget">
+                                <h5>Company</h5>
+                                <ul>                                        
+                                    <li><a href="shop-homepage.html">Home</a></li>
+                                    <li><a href="services.html">Our Services</a></li>
+                                    <li><a href="shop-shop-all.html">Projects</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="widget">
+                                <h5>Our Services</h5>
+                                <ul>
+                                    <li><a href="service-single.html">Garden Design</a></li>
+                                    <li><a href="service-single.html">Garden Maintenance</a></li>
+                                    <li><a href="service-single.html">Planting Services</a></li>
+                                    <li><a href="service-single.html">Tree Care</a></li>
+                                    <li><a href="service-single.html">Irrigation Services</a></li>
+                                    <li><a href="service-single.html">Specialty Services</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 order-lg-2 order-sm-1">
+                    <div class="widget">
+                        <div class="fw-bold text-white"><i class="icofont-clock-time me-2 id-color-2"></i>We're Open</div>
+                         Monday - Friday (08.00 AM - 10.00 PM)
+
+                        <div class="spacer-20"></div>
+
+                        <div class="fw-bold text-white"><i class="icofont-location-pin me-2 id-color-2"></i>Office Location</div>
+                        India
+
+                        <div class="spacer-20"></div>
+
+                        <div class="fw-bold text-white"><i class="icofont-envelope me-2 id-color-2"></i>Send a Message</div>
+                        bhoomi@yahoo.com                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                Copyright 2025 - Bhoomi by Designesia
+                            </div>
+                            <ul class="menu-simple">
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="images/misc/silhuette-1-black.webp" class="abs bottom-0 op-3" alt="">
+    </footer>
+    <!-- footer end -->
+</div>
+
+<!-- overlay content begin -->
+<div id="extra-wrap" class="de-light cart-wrap">
+    <div id="btn-close" class="dark">
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="extra-content">
+        <img src="images/logo-black.png" class="w-150px" alt="">
+
+        <div class="spacer-30-line"></div>
+
+        <h5 class="mb-3">Your Cart</h5>
+        
+        <div class="cart-items">                
+            <!-- cart item begin -->
+            <div class="de__cart">
+                <div class="de__cart-item justify-content-between">
+                    <div class="d-wrap">
+                        <input type="checkbox" id="item" name="item" class="d-checkbox__input" checked />
+                        <label for="item" class="d-checkbox__label align-items-center"></label>
+                        <img src="images/shop/plants/peace-lily-l.webp" alt="">
+                        <div class="d-info">
+                            <div>
+                                <h4>Peace Lily</h4>                                
+                                <span class="d-price">$150</span> 
+                            </div>         
+                        </div>  
+                    </div>
+
+                    <div class="de-number">
+                        <span class="d-minus">-</span>
+                        <input type="text" class="no-border no-bg" value="1">
+                        <span class="d-plus">+</span>
+                    </div>
+                </div>
+            </div>   
+            <!-- cart item end -->
+
+            <!-- cart item begin -->
+            <div class="de__cart">
+                <div class="de__cart-item justify-content-between">
+                    <div class="d-wrap">
+                        <input type="checkbox" id="item" name="item" class="d-checkbox__input" checked />
+                        <label for="item" class="d-checkbox__label align-items-center"></label>
+                        <img src="images/shop/plants/aglonema.webp" alt="">
+                        <div class="d-info">
+                            <div>
+                                <h4>Aglonema Plant</h4>                                
+                                <span class="d-price">$150</span> 
+                            </div>         
+                        </div>  
+                    </div>
+
+                    <div class="de-number">
+                        <span class="d-minus">-</span>
+                        <input type="text" class="no-border no-bg" value="1">
+                        <span class="d-plus">+</span>
+                    </div>
+                </div>
+            </div>   
+            <!-- cart item end -->
+
+            <!-- cart item begin -->
+            <div class="de__cart">
+                <div class="de__cart-item justify-content-between">
+                    <div class="d-wrap">
+                        <input type="checkbox" id="item" name="item" class="d-checkbox__input" checked />
+                        <label for="item" class="d-checkbox__label align-items-center"></label>
+                        <img src="images/shop/plants/jade-mini.webp" alt="">
+                        <div class="d-info">
+                            <div>
+                                <h4>Jade Mini Plant</h4>                                
+                                <span class="d-price">$150</span> 
+                            </div>         
+                        </div>  
+                    </div>
+
+                    <div class="de-number">
+                        <span class="d-minus">-</span>
+                        <input type="text" class="no-border no-bg" value="1">
+                        <span class="d-plus">+</span>
+                    </div>
+                </div>
+            </div>   
+            <!-- cart item end -->
+
+            <!-- cart item begin -->
+            <div class="de__cart">
+                <div class="de__cart-item justify-content-between">
+                    <div class="d-wrap">
+                        <input type="checkbox" id="item" name="item" class="d-checkbox__input" checked />
+                        <label for="item" class="d-checkbox__label align-items-center"></label>
+                        <img src="images/shop/plants/monstera-deliciosa.webp" alt="">
+                        <div class="d-info">
+                            <div>
+                                <h4>Monstera Deliciosa Plant</h4>                                
+                                <span class="d-price">$150</span> 
+                            </div>         
+                        </div>  
+                    </div>
+
+                    <div class="de-number">
+                        <span class="d-minus">-</span>
+                        <input type="text" class="no-border no-bg" value="1">
+                        <span class="d-plus">+</span>
+                    </div>
+                </div>
+            </div>   
+            <!-- cart item end -->
+
+            <!-- cart item begin -->
+            <div class="de__cart">
+                <div class="de__cart-item justify-content-between">
+                    <div class="d-wrap">
+                        <input type="checkbox" id="item" name="item" class="d-checkbox__input" checked />
+                        <label for="item" class="d-checkbox__label align-items-center"></label>
+                        <img src="images/shop/plants/anthurium-red.webp" alt="">
+                        <div class="d-info">
+                            <div>
+                                <h4>Anthurium Red Plant</h4>                                
+                                <span class="d-price">$150</span> 
+                            </div>         
+                        </div>  
+                    </div>
+
+                    <div class="de-number">
+                        <span class="d-minus">-</span>
+                        <input type="text" class="no-border no-bg" value="1">
+                        <span class="d-plus">+</span>
+                    </div>
+                </div>
+            </div>   
+            <!-- cart item end -->
+
+            <!-- cart item begin -->
+            <div class="de__cart">
+                <div class="de__cart-item justify-content-between">
+                    <div class="d-wrap">
+                        <input type="checkbox" id="item" name="item" class="d-checkbox__input" checked />
+                        <label for="item" class="d-checkbox__label align-items-center"></label>
+                        <img src="images/shop/plants/peace-lily-l.webp" alt="">
+                        <div class="d-info">
+                            <div>
+                                <h4>Peace Lily</h4>                                
+                                <span class="d-price">$150</span> 
+                            </div>         
+                        </div>  
+                    </div>
+
+                    <div class="de-number">
+                        <span class="d-minus">-</span>
+                        <input type="text" class="no-border no-bg" value="1">
+                        <span class="d-plus">+</span>
+                    </div>
+                </div>
+            </div>   
+            <!-- cart item end -->                   
+        </div>
+
+    </div>
+</div>
+<!-- overlay content end -->
+
+<div id="buy-now" class="show-on-scroll">
+    <a class="btn-buy" href="https://themeforest.net/cart/configure_before_adding/54233145" target="_blank">Buy on <img src="demo/envato.png" class="" alt=""></a>
+</div>
+
+ <!-- Javascript Files
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+
+</body>
+
+
+<!-- Mirrored from madebydesignesia.com/themes/Bhoomi/shop-shop-all.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Sep 2025 21:33:53 GMT -->
+</html>

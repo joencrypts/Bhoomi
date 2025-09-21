@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Bhoomi — Login to Agricultural Marketplace</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Bhoomi — Login to your agricultural marketplace account as farmer, warehouse partner, or manufacturer" name="description">
+    <meta content="farmer login, warehouse partner login, manufacturer login, agricultural marketplace login, Bhoomi login" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <a href="#" id="back-to-top"></a>
+        
+        <!-- preloader begin -->
+        <div id="de-loader"></div>
+        <!-- preloader end -->
+
+        <!-- header begin -->
+        <header class="transparent">
+            <div id="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="d-flex justify-content-between xs-hide">
+                                <div class="d-flex">
+                                    <div class="topbar-widget me-3"><a href="#"><i class="icofont-clock-time"></i> Monday - Friday (08.00 AM - 10.00 PM)</a></div>
+                                    <div class="topbar-widget me-3"><a href="#"><i class="icofont-location-pin"></i>India</a></div>
+                                    <div class="topbar-widget me-3"><a href="#"><i class="icofont-envelope"></i>bhoomi@yahoo.com</a></div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                                        <a href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+                                        <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                                        <a href="#"><i class="fa-brands fa-pinterest fa-lg"></i></a>
+                                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="images/white.png" alt="">
+                                        <img class="logo-mobile" src="images/white.png" alt="">
+                                    </a>
+                                </div>
+                                <!-- logo end -->
+                            </div>
+                            <div class="de-flex-col header-col-mid">
+                                <!-- mainemenu begin -->
+                                <ul id="mainmenu">
+                                    <li><a class="menu-item" href="index.html">Home</a></li>
+                                    <li><a class="menu-item" href="services.html">Services</a></li>
+                                    <li><a class="menu-item" href="projects.html">Projects</a></li>
+                                    <li><a class="menu-item" href="about.html">About</a></li>
+                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                </ul>
+                                <!-- mainemenu end -->
+                            </div>
+                            <div class="de-flex-col">
+                                <div class="menu_side_area">          
+                                    <a href="login.html" class="btn-main btn-line me-2">Login</a>
+                                    <a href="signup.html" class="btn-main">Join Bhoomi</a>
+                                    <span id="menu-btn"></span>
+                                </div>
+                                <div id="btn-extra">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <section id="subheader" class="relative jarallax text-light">
+                <img src="images/background/8.webp" class="jarallax-img" alt="">
+                <div class="container relative z-index-1000">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="crumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active">Login</li>
+                            </ul>
+                            <h1 class="text-uppercase">Login to Bhoomi</h1>
+                            <p class="col-lg-10 lead">Access your agricultural marketplace dashboard!</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="images/logo-wm.webp" class="abs end-0 bottom-0 z-2 w-20" alt="">
+                <div class="de-gradient-edge-top dark"></div>
+                <div class="de-overlay"></div>
+            </section>
+
+            <section class="pt80 pb80">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="bg-light padding30 rounded-1">
+                                <div class="text-center mb-5">
+                                    <h2>Choose Your <span class="id-color-2">Login Type</span></h2>
+                                    <p>Select your role to access the appropriate dashboard</p>
+                                </div>
+
+                                <!-- Login Type Selection -->
+                                <div class="row g-4 mb-5">
+                                    <div class="col-lg-4">
+                                        <div class="login-option text-center p-4 border rounded-1 hover" onclick="showLoginForm('farmer')">
+                                            <div class="mb-3">
+                                                <i class="icofont-farmer fs-48 text-color"></i>
+                                            </div>
+                                            <h5>Farmer Login</h5>
+                                            <p class="text-muted">Access your byproduct listings and transactions</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="login-option text-center p-4 border rounded-1 hover" onclick="showLoginForm('warehouse')">
+                                            <div class="mb-3">
+                                                <i class="icofont-building fs-48 text-color"></i>
+                                            </div>
+                                            <h5>Warehouse Partner Login</h5>
+                                            <p class="text-muted">Manage your storage partnerships and rentals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="login-option text-center p-4 border rounded-1 hover" onclick="showLoginForm('manufacturer')">
+                                            <div class="mb-3">
+                                                <i class="icofont-quote-left fs-48 text-color"></i>
+                                            </div>
+                                            <h5>Manufacturer Login</h5>
+                                            <p class="text-muted">Source byproducts and manage suppliers</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Farmer Login Form -->
+                                <div id="farmer-login" class="login-form" style="display: none;">
+                                    <h4 class="text-center mb-4">Farmer Login</h4>
+                                    <form id="farmerLoginForm" onsubmit="handleLogin(event, 'farmer')">
+                                        <div class="row g-4">
+                                            <div class="col-12">
+                                                <label class="form-label">Email Address *</label>
+                                                <input type="email" class="form-control" name="email" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Password *</label>
+                                                <input type="password" class="form-control" name="password" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="remember">
+                                                    <label class="form-check-label">Remember me</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <button type="submit" class="btn-main">Login as Farmer</button>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <p class="text-muted">Demo Credentials: farmer@123 / 123456</p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!-- Warehouse Login Form -->
+                                <div id="warehouse-login" class="login-form" style="display: none;">
+                                    <h4 class="text-center mb-4">Warehouse Partner Login</h4>
+                                    <form id="warehouseLoginForm" onsubmit="handleLogin(event, 'warehouse')">
+                                        <div class="row g-4">
+                                            <div class="col-12">
+                                                <label class="form-label">Email Address *</label>
+                                                <input type="email" class="form-control" name="email" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Password *</label>
+                                                <input type="password" class="form-control" name="password" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="remember">
+                                                    <label class="form-check-label">Remember me</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <button type="submit" class="btn-main">Login as Warehouse Partner</button>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <p class="text-muted">Demo Credentials: ware@123 / 123456</p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!-- Manufacturer Login Form -->
+                                <div id="manufacturer-login" class="login-form" style="display: none;">
+                                    <h4 class="text-center mb-4">Manufacturer Login</h4>
+                                    <form id="manufacturerLoginForm" onsubmit="handleLogin(event, 'manufacturer')">
+                                        <div class="row g-4">
+                                            <div class="col-12">
+                                                <label class="form-label">Email Address *</label>
+                                                <input type="email" class="form-control" name="email" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Password *</label>
+                                                <input type="password" class="form-control" name="password" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="remember">
+                                                    <label class="form-check-label">Remember me</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <button type="submit" class="btn-main">Login as Manufacturer</button>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <p class="text-muted">Demo Credentials: indu@123 / 123456</p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="text-center mt-4">
+                                    <p>Don't have an account? <a href="signup.html" class="text-color">Sign up here</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- content end -->
+
+        <!-- footer begin -->
+        <footer class="section-dark">
+            <div class="container relative z-2">
+                <div class="row gx-5">
+                    <div class="col-lg-4 col-sm-6">
+                        <img src="images/white.png" class="w-150px" alt="">
+                        <div class="spacer-20"></div>
+                        <p>Transform agricultural waste into valuable resources with Bhoomi's comprehensive marketplace platform! Connect farmers, warehouses, and manufacturers through our innovative ecosystem.</p>
+                        <div class="social-icons mb-sm-30">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></a>
+                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 order-lg-1 order-sm-2">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="widget">
+                                    <h5>Company</h5>
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="services.html">Our Services</a></li>
+                                        <li><a href="projects.html">Projects</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="widget">
+                                    <h5>Our Services</h5>
+                                    <ul>
+                                        <li><a href="service-single.html">Farmer Byproduct Marketplace</a></li>
+                                        <li><a href="service-single.html">Warehouse Partnership Network</a></li>
+                                        <li><a href="service-single.html">Manufacturer Sourcing Portal</a></li>
+                                        <li><a href="service-single.html">Inventory Management System</a></li>
+                                        <li><a href="service-single.html">Legal Compliance Automation</a></li>
+                                        <li><a href="service-single.html">End-to-End Logistics Coordination</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 order-lg-2 order-sm-1">
+                        <div class="widget">
+                            <div class="fw-bold text-white"><i class="icofont-clock-time me-2 id-color-2"></i>We're Open</div>
+                            Monday - Friday (08.00 AM - 10.00 PM)
+                            <div class="spacer-20"></div>
+                            <div class="fw-bold text-white"><i class="icofont-location-pin me-2 id-color-2"></i>Office Location</div>
+                            India
+                            <div class="spacer-20"></div>
+                            <div class="fw-bold text-white"><i class="icofont-envelope me-2 id-color-2"></i>Send a Message</div>
+                            bhoomi@yahoo.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="de-flex">
+                                <div class="de-flex-col">
+                                    Copyright 2024 - Bhoomi Agricultural Marketplace
+                                </div>
+                                <ul class="menu-simple">
+                                    <li><a href="#">Terms &amp; Conditions</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="images/misc/silhuette-1-black.webp" class="abs bottom-0 op-3" alt="">
+        </footer>
+        <!-- footer end -->
+    </div>
+
+    <!-- Javascript Files -->
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    
+    <script>
+        // Default credentials for demo
+        const defaultCredentials = {
+            farmer: { email: 'farmer@123', password: '123456' },
+            warehouse: { email: 'ware@123', password: '123456' },
+            manufacturer: { email: 'indu@123', password: '123456' }
+        };
+
+        // Show login form based on user selection
+        function showLoginForm(type) {
+            // Hide all forms
+            document.querySelectorAll('.login-form').forEach(form => {
+                form.style.display = 'none';
+            });
+            
+            // Show selected form
+            document.getElementById(type + '-login').style.display = 'block';
+            
+            // Add active class to selected option
+            document.querySelectorAll('.login-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+        }
+
+        // Handle login form submission
+        function handleLogin(event, userType) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const email = formData.get('email');
+            const password = formData.get('password');
+            
+            // Check against default credentials
+            if (email === defaultCredentials[userType].email && password === defaultCredentials[userType].password) {
+                // Create user session
+                const userSession = {
+                    userType: userType,
+                    email: email,
+                    loginTime: new Date().toISOString(),
+                    isLoggedIn: true
+                };
+                
+                // Store in localStorage
+                localStorage.setItem('bhoomiUserSession', JSON.stringify(userSession));
+                
+                // Show success message
+                alert('Login successful! Redirecting to your dashboard...');
+                
+                // Redirect to appropriate dashboard
+                window.location.href = 'dashboard.html';
+            } else {
+                // Check against registered users
+                const users = JSON.parse(localStorage.getItem('bhoomiUsers') || '[]');
+                const user = users.find(u => u.email === email && u.userType === userType);
+                
+                if (user) {
+                    // For demo purposes, accept any password for registered users
+                    const userSession = {
+                        userType: userType,
+                        email: email,
+                        userData: user,
+                        loginTime: new Date().toISOString(),
+                        isLoggedIn: true
+                    };
+                    
+                    localStorage.setItem('bhoomiUserSession', JSON.stringify(userSession));
+                    alert('Login successful! Redirecting to your dashboard...');
+                    window.location.href = 'dashboard.html';
+                } else {
+                    alert('Invalid credentials. Please check your email and password.');
+                }
+            }
+        }
+
+        // Check if user is already logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            const userSession = JSON.parse(localStorage.getItem('bhoomiUserSession') || 'null');
+            if (userSession && userSession.isLoggedIn) {
+                // User is already logged in, redirect to dashboard
+                window.location.href = 'dashboard.html';
+            }
+        });
+    </script>
+</body>
+</html>
