@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Bhoomi — Farmer Dashboard</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Farmer dashboard for stock updates, notifications, and storage rentals" name="description">
+    <meta content="farmer dashboard, stock update, storage rental" name="keywords">
+    <meta content="" name="author">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <a href="#" id="back-to-top"></a>
+        <div id="de-loader"></div>
+        <header class="transparent">
+            <div id="topbar">
+                <div class="container"><div class="row"><div class="col-lg-12"><div class="d-flex justify-content-between xs-hide"><div class="d-flex"><div class="topbar-widget me-3"><a href="#"><i class="icofont-clock-time"></i> Monday - Friday (08.00 AM - 10.00 PM)</a></div><div class="topbar-widget me-3"><a href="#"><i class="icofont-location-pin"></i>Pan India Coverage</a></div><div class="topbar-widget me-3"><a href="#"><i class="icofont-envelope"></i>support@bhoomi.com</a></div></div><div class="d-flex"><div class="social-icons"><a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a><a href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></a><a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a><a href="#"><i class="fa-brands fa-pinterest fa-lg"></i></a><a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a></div></div></div></div><div class="clearfix"></div></div>
+            </div>
+            <div class="container">
+                <div class="row"><div class="col-md-12"><div class="de-flex sm-pt10"><div class="de-flex-col"><div id="logo"><a href="index.html"><img class="logo-main" src="images/white.png" alt=""><img class="logo-mobile" src="images/white.png" alt=""></a></div></div><div class="de-flex-col header-col-mid"><ul id="mainmenu"><li><a class="menu-item" href="index.html">Home</a></li><li><a class="menu-item" href="services.html">Platform Features</a></li><li><a class="menu-item" href="shop-homepage.html">Marketplace</a></li><li><a class="menu-item" href="contact.html">Contact</a></li></ul></div><div class="de-flex-col"><div class="menu_side_area"><a href="login.html" class="btn-main btn-line me-2">Switch Account</a><span id="menu-btn"></span></div><div id="btn-extra"><span></span><span></span></div></div></div></div></div>
+            </div>
+        </header>
+
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <!-- Farmer Dashboard: Stock Update & Notifications -->
+            <section class="bg-light pt-5 pb-5">
+                <div class="container">
+                    <div class="row g-4 mb-3 align-items-center justify-content-between">
+                        <div class="col-xl-6">
+                            <div class="subtitle wow fadeInUp">Farmer Dashboard</div>
+                            <h2 class="text-uppercase wow fadeInUp" data-wow-delay=".2s">Stock <span class="id-color-2">Update</span></h2>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-7">
+                            <div class="rounded-1 bg-body p-4 shadow-soft">
+                                <form id="farmerStockForm" class="row g-3">
+                                    <div class="col-md-6"><label class="form-label">Farmer Name</label><input type="text" class="form-control" name="farmerName" required></div>
+                                    <div class="col-md-6"><label class="form-label">Contact</label><input type="text" class="form-control" name="farmerContact" required></div>
+                                    <div class="col-md-6"><label class="form-label">Crop Type</label><select class="form-select" name="cropType" required><option value="">Select Crop</option><option>Rice</option><option>Wheat</option><option>Sugarcane</option><option>Cotton</option><option>Maize</option><option>Pulses</option></select></div>
+                                    <div class="col-md-6"><label class="form-label">Byproduct Type</label><select class="form-select" name="byproductType" required><option value="">Select Byproduct</option><option>Rice Husk</option><option>Wheat Straw</option><option>Bagasse</option><option>Cotton Stalks</option><option>Corn Stover</option><option>Pulses Husk</option></select></div>
+                                    <div class="col-md-4"><label class="form-label">Quantity Available</label><input type="number" min="0" step="0.01" class="form-control" name="quantity" required></div>
+                                    <div class="col-md-2"><label class="form-label">Unit</label><select class="form-select" name="quantityUnit"><option>Tons</option><option>Quintals</option></select></div>
+                                    <div class="col-md-6"><label class="form-label">Quality Grade</label><select class="form-select" name="qualityGrade" required><option value="">Select Grade</option><option>A</option><option>B</option><option>C</option><option>Premium</option><option>Standard</option><option>Basic</option></select></div>
+                                    <div class="col-md-6"><label class="form-label">Harvest Date</label><input type="date" class="form-control" name="harvestDate" required></div>
+                                    <div class="col-md-6"><label class="form-label">Storage Location / Address</label><input type="text" class="form-control" name="storageLocation" required></div>
+                                    <div class="col-md-6"><label class="form-label">Expected Price Range</label><input type="text" class="form-control" name="expectedPriceRange"></div>
+                                    <div class="col-12"><label class="form-label">Additional Notes</label><textarea class="form-control" rows="3" name="notes"></textarea></div>
+                                    <div class="col-12"><label class="form-label">Upload Photos (max 5)</label><input type="file" class="form-control" name="photos" accept="image/*" multiple></div>
+                                    <div class="col-12"><button type="submit" class="btn-main">Submit Stock</button></div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="rounded-1 bg-body p-4 shadow-soft mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0">My Submissions</h5><select id="farmerFilterStatus" class="form-select w-auto"><option value="">All</option><option value="Pending">Pending</option><option value="Accepted">Accepted</option><option value="Rejected">Rejected</option></select></div>
+                                <div class="table-responsive"><table class="table table-striped align-middle"><thead><tr><th>ID</th><th>Crop</th><th>Byproduct</th><th>Qty</th><th>Status</th><th>Action</th></tr></thead><tbody id="farmerSubmissionsTable"></tbody></table></div>
+                            </div>
+                            <div class="rounded-1 bg-body p-4 shadow-soft"><h5 class="mb-3">Notifications</h5><div id="farmerNotifications" class="list-group"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Farmer: Request Storage Rental & Rentals List -->
+            <section class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row g-4 mb-3 align-items-center justify-content-between"><div class="col-xl-6"><div class="subtitle wow fadeInUp">Farmer Dashboard</div><h2 class="text-uppercase wow fadeInUp" data-wow-delay=".2s">Request <span class="id-color-2">Storage Rental</span></h2></div></div>
+                    <div class="row g-4">
+                        <div class="col-lg-7">
+                            <div class="rounded-1 bg-body p-4 shadow-soft">
+                                <form id="rentalRequestForm" class="row g-3">
+                                    <div class="col-md-6"><label class="form-label">Farmer Name</label><input type="text" class="form-control" name="farmerName" required></div>
+                                    <div class="col-md-6"><label class="form-label">Contact</label><input type="text" class="form-control" name="farmerContact" required></div>
+                                    <div class="col-md-4"><label class="form-label">Storage Duration</label><input type="number" min="1" class="form-control" name="durationValue" required></div>
+                                    <div class="col-md-2"><label class="form-label">Unit</label><select class="form-select" name="durationUnit"><option>Days</option><option>Months</option></select></div>
+                                    <div class="col-md-6"><label class="form-label">Required Area</label><div class="input-group"><input type="number" min="1" step="0.01" class="form-control" name="area" required><select class="form-select" name="areaUnit" style="max-width: 160px;"><option>sq.ft</option><option>cubic m</option></select></div></div>
+                                    <div class="col-md-6"><label class="form-label">Commodity Type</label><input type="text" class="form-control" name="commodityType" required></div>
+                                    <div class="col-md-6"><label class="form-label">Commodity Quantity</label><input type="text" class="form-control" name="commodityQty" required></div>
+                                    <div class="col-md-6"><label class="form-label">Expected Start Date</label><input type="date" class="form-control" name="startDate" required></div>
+                                    <div class="col-md-6"><label class="form-label">Rental Budget</label><input type="text" class="form-control" name="budget"></div>
+                                    <div class="col-12"><label class="form-label">Special Storage Requirements</label><div class="row g-2"><div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" value="Temperature Control" name="req_temp" id="req_temp"><label class="form-check-label" for="req_temp">Temperature</label></div></div><div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" value="Moisture Protection" name="req_moist" id="req_moist"><label class="form-check-label" for="req_moist">Moisture</label></div></div><div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" value="Pest Control" name="req_pest" id="req_pest"><label class="form-check-label" for="req_pest">Pest</label></div></div><div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" value="Security" name="req_security" id="req_security"><label class="form-check-label" for="req_security">Security</label></div></div></div></div>
+                                    <div class="col-12"><label class="form-label">Notes</label><textarea class="form-control" rows="2" name="notes"></textarea></div>
+                                    <div class="col-12"><button type="submit" class="btn-main">Submit Rental Request</button></div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="rounded-1 bg-body p-4 shadow-soft mb-4"><div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0">Storage Rentals</h5><select id="rentalFilterStatus" class="form-select w-auto"><option value="">All</option><option value="Pending">Pending</option><option value="Accepted">Accepted</option><option value="Rejected">Rejected</option></select></div><div class="table-responsive"><table class="table table-striped align-middle"><thead><tr><th>ID</th><th>Area</th><th>Duration</th><th>Status</th><th>Action</th></tr></thead><tbody id="farmerRentalsTable"></tbody></table></div></div>
+                            <div class="rounded-1 bg-body p-4 shadow-soft"><h5 class="mb-3">Rental Invoices</h5><div class="table-responsive"><table class="table table-sm align-middle"><thead><tr><th>Invoice #</th><th>Amount</th><th>Status</th><th>View</th></tr></thead><tbody id="farmerRentalInvoicesTable"></tbody></table></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="section-dark">
+            <div class="container relative z-2"><div class="row gx-5"><div class="col-lg-4 col-sm-6"><img src="images/white.png" class="w-150px" alt=""><div class="spacer-20"></div><p>Transform agricultural waste into revenue streams with Bhoomi.</p><div class="social-icons mb-sm-30"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div></div><div class="col-lg-4 col-sm-12 order-lg-1 order-sm-2"><div class="row"><div class="col-lg-6 col-sm-6"><div class="widget"><h5>Company</h5><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Platform Features</a></li><li><a href="projects.html">Success Stories</a></li><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div></div><div class="col-lg-6 col-sm-6"><div class="widget"><h5>Platform Features</h5><ul><li><a href="service-single.html">Inventory Management</a></li><li><a href="service-single.html">Supply Chain Tracking</a></li><li><a href="service-single.html">Legal Compliance</a></li><li><a href="service-single.html">Automated Billing</a></li><li><a href="service-single.html">Quality Assurance</a></li><li><a href="service-single.html">Logistics Coordination</a></li></ul></div></div></div></div><div class="col-lg-4 col-sm-6 order-lg-2 order-sm-1"><div class="widget"><div class="fw-bold text-white"><i class="icofont-clock-time me-2 id-color-2"></i>We're Open</div> Monday - Friday (08.00 AM - 10.00 PM)<div class="spacer-20"></div><div class="fw-bold text-white"><i class="icofont-location-pin me-2 id-color-2"></i>Service Coverage</div>Pan India<div class="spacer-20"></div><div class="fw-bold text-white"><i class="icofont-envelope me-2 id-color-2"></i>Send a Message</div>support@bhoomi.com</div></div></div></div>
+            <div class="subfooter"><div class="container"><div class="row"><div class="col-md-12"><div class="de-flex"><div class="de-flex-col">Copyright 2025 - Bhoomi Agricultural Marketplace</div><ul class="menu-simple"><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Privacy Policy</a></li></ul></div></div></div></div></div>
+            <img src="images/misc/silhuette-1-black.webp" class="abs bottom-0 op-3" alt="">
+        </footer>
+    </div>
+
+    <div class="modal fade" id="confirmSubmitModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Confirm Stock Submission</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">Submit this stock listing for warehouse review?</div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button><button type="button" id="confirmSubmitBtn" class="btn btn-primary">Confirm</button></div></div></div></div>
+    <div class="modal fade" id="confirmReapplyModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Reapply Submission</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">Create a new submission based on this request?</div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button><button type="button" id="confirmReapplyBtn" class="btn btn-primary">Reapply</button></div></div></div></div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/stock-workflow.js"></script>
+    <script>
+    (function(){
+        if (window.BhoomiStock) {
+            window.BhoomiStock.initFarmerPage();
+            window.BhoomiStock.initRentals();
+        }
+        // add Logout button to header and wire handler
+        var headerArea = document.querySelector('.menu_side_area');
+        if (headerArea) {
+            var btn = document.createElement('a');
+            btn.href = '#';
+            btn.className = 'btn-main ms-2';
+            btn.id = 'btn-logout';
+            btn.textContent = 'Logout';
+            headerArea.appendChild(btn);
+        }
+        document.addEventListener('click', function(e){
+            if(e.target && e.target.id==='btn-logout'){
+                e.preventDefault();
+                try { localStorage.removeItem('bhoomiUserSession'); } catch(_){ }
+                window.location.href = 'login.html';
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
+
+

@@ -394,7 +394,13 @@
                 alert('Login successful! Redirecting to your dashboard...');
                 
                 // Redirect to appropriate dashboard
-                window.location.href = 'dashboard.html';
+                if (userType === 'farmer') {
+                    window.location.href = 'farmer-dashboard.html';
+                } else if (userType === 'warehouse') {
+                    window.location.href = 'warehouse-dashboard.html';
+                } else {
+                    window.location.href = 'industry-dashboard.html';
+                }
             } else {
                 // Check against registered users
                 const users = JSON.parse(localStorage.getItem('bhoomiUsers') || '[]');
@@ -423,8 +429,14 @@
         document.addEventListener('DOMContentLoaded', function() {
             const userSession = JSON.parse(localStorage.getItem('bhoomiUserSession') || 'null');
             if (userSession && userSession.isLoggedIn) {
-                // User is already logged in, redirect to dashboard
-                window.location.href = 'dashboard.html';
+                // User is already logged in, redirect to dashboard by role
+                if (userSession.userType === 'farmer') {
+                    window.location.href = 'farmer-dashboard.html';
+                } else if (userSession.userType === 'warehouse') {
+                    window.location.href = 'warehouse-dashboard.html';
+                } else {
+                    window.location.href = 'industry-dashboard.html';
+                }
             }
         });
     </script>

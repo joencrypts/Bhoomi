@@ -1,4 +1,4 @@
-# Bhoomi - Garden and Landscape Website Template
+# Bhoomi – Agricultural Byproduct Marketplace
 
 ## Project Overview
 This is a complete garden and landscape website template with multiple pages including homepage, about, services, projects, contact, and more. The template is fully responsive and includes modern web technologies.
@@ -46,7 +46,15 @@ Bhoomi/
 └── README.md              # This file
 ```
 
-## How to Run the Project
+## Deploy on Vercel
+
+1. Fork or push this repo to GitHub.
+2. In Vercel, import the repo and deploy. This is a static site; no build step is required.
+3. `vercel.json` is included to route clean URLs to the correct HTML files.
+
+Optional: Set `window.BHOOMI_API_BASE` in `js/api-config.js` if you deploy a backend.
+
+## How to Run Locally
 
 ### Method 1: Using Python HTTP Server
 1. Open terminal/command prompt

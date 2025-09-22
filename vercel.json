@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "name": "bhoomi",
+  "public": true,
+  "builds": [
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "css/**", "use": "@vercel/static" },
+    { "src": "js/**", "use": "@vercel/static" },
+    { "src": "images/**", "use": "@vercel/static" },
+    { "src": "fonts/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/farmer-dashboard", "dest": "/farmer-dashboard.html" },
+    { "src": "/warehouse-dashboard", "dest": "/warehouse-dashboard.html" },
+    { "src": "/industry-dashboard", "dest": "/industry-dashboard.html" },
+    { "src": "/login", "dest": "/login.html" },
+    { "src": "/signup", "dest": "/signup.html" }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
+
+

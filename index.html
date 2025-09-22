@@ -146,7 +146,7 @@
                                         <ul>
                                             <li><a href="services.html">All Features</a></li>
                                             <li><a href="service-single.html">Inventory Management</a></li>
-                                            <li><a href="pricing-plans.html">Pricing Plans</a></li>
+                                            
                                             <li><a href="price-list.html">Marketplace Fees</a></li>
                                         </ul>
                                     </li>
@@ -390,6 +390,700 @@
                             </div>
                         </div>
                         
+                    </div>
+                </div>
+            </section>
+
+            <!-- Farmer Dashboard: Stock Update & Notifications -->
+            <section class="bg-light pt-5 pb-5">
+                <div class="container">
+                    <div class="row g-4 mb-3 align-items-center justify-content-between">
+                        <div class="col-xl-6">
+                            <div class="subtitle wow fadeInUp">Farmer Dashboard</div>
+                            <h2 class="text-uppercase wow fadeInUp" data-wow-delay=".2s">Stock <span class="id-color-2">Update</span></h2>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-7">
+                            <div class="rounded-1 bg-body p-4 shadow-soft">
+                                <form id="farmerStockForm" class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Farmer Name</label>
+                                        <input type="text" class="form-control" name="farmerName" placeholder="Your full name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Contact</label>
+                                        <input type="text" class="form-control" name="farmerContact" placeholder="Phone or Email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Crop Type</label>
+                                        <select class="form-select" name="cropType" required>
+                                            <option value="">Select Crop</option>
+                                            <option>Rice</option>
+                                            <option>Wheat</option>
+                                            <option>Sugarcane</option>
+                                            <option>Cotton</option>
+                                            <option>Maize</option>
+                                            <option>Pulses</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Byproduct Type</label>
+                                        <select class="form-select" name="byproductType" required>
+                                            <option value="">Select Byproduct</option>
+                                            <option>Rice Husk</option>
+                                            <option>Wheat Straw</option>
+                                            <option>Bagasse</option>
+                                            <option>Cotton Stalks</option>
+                                            <option>Corn Stover</option>
+                                            <option>Pulses Husk</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Quantity Available</label>
+                                        <input type="number" min="0" step="0.01" class="form-control" name="quantity" placeholder="e.g., 10" required>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">Unit</label>
+                                        <select class="form-select" name="quantityUnit">
+                                            <option>Tons</option>
+                                            <option>Quintals</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Quality Grade</label>
+                                        <select class="form-select" name="qualityGrade" required>
+                                            <option value="">Select Grade</option>
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
+                                            <option>Premium</option>
+                                            <option>Standard</option>
+                                            <option>Basic</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Harvest Date</label>
+                                        <input type="date" class="form-control" name="harvestDate" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Storage Location / Address</label>
+                                        <input type="text" class="form-control" name="storageLocation" placeholder="Village, District, State" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Expected Price Range</label>
+                                        <input type="text" class="form-control" name="expectedPriceRange" placeholder="e.g., ₹1500 - ₹2000 /ton">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Additional Notes</label>
+                                        <textarea class="form-control" rows="3" name="notes" placeholder="Any quality certificates, moisture %, logistics, etc."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Upload Photos (max 5)</label>
+                                        <input type="file" class="form-control" name="photos" accept="image/*" multiple>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn-main">Submit Stock</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="rounded-1 bg-body p-4 shadow-soft mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="mb-0">My Submissions</h5>
+                                    <select id="farmerFilterStatus" class="form-select w-auto">
+                                        <option value="">All</option>
+                                        <option value="Pending">Pending</option>
+                                        <option value="Accepted">Accepted</option>
+                                        <option value="Rejected">Rejected</option>
+                                    </select>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Crop</th>
+                                                <th>Byproduct</th>
+                                                <th>Qty</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="farmerSubmissionsTable"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="rounded-1 bg-body p-4 shadow-soft">
+                                <h5 class="mb-3">Notifications</h5>
+                                <div id="farmerNotifications" class="list-group"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Warehouse Dashboard: Incoming Stock Requests -->
+            <section class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row g-4 mb-3 align-items-center justify-content-between">
+                        <div class="col-xl-6">
+                            <div class="subtitle wow fadeInUp">Warehouse Dashboard</div>
+                            <h2 class="text-uppercase wow fadeInUp" data-wow-delay=".2s">Manage <span class="id-color-2">Requests</span></h2>
+                        </div>
+                        <div class="col-xl-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="farmer-tab" data-bs-toggle="tab" data-bs-target="#farmerPane" type="button" role="tab">Stock Requests (Farmers)</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="industry-tab" data-bs-toggle="tab" data-bs-target="#industryPane" type="button" role="tab">Industry Requirements</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="rental-tab" data-bs-toggle="tab" data-bs-target="#rentalPane" type="button" role="tab">Storage Rental Requests</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="income-tab" data-bs-toggle="tab" data-bs-target="#incomePane" type="button" role="tab">Rental Income</button>
+                              </li>
+                            </ul>
+                            <div class="tab-content rounded-bottom-1 bg-body p-4 shadow-soft">
+                              <div class="tab-pane fade show active" id="farmerPane" role="tabpanel">
+                                <div class="d-flex gap-2 justify-content-end mb-3">
+                                    <input id="searchInput" type="text" class="form-control" placeholder="Search farmer, crop, byproduct, location">
+                                    <select id="statusFilter" class="form-select w-auto">
+                                        <option value="">All Statuses</option>
+                                        <option value="Pending">Pending</option>
+                                        <option value="Accepted">Accepted</option>
+                                        <option value="Rejected">Rejected</option>
+                                    </select>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Farmer</th>
+                                                <th>Contact</th>
+                                                <th>Crop / Byproduct</th>
+                                                <th>Quantity</th>
+                                                <th>Location</th>
+                                                <th>Harvest</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="warehouseRequestsTable"></tbody>
+                                    </table>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="industryPane" role="tabpanel">
+                                <div class="d-flex gap-2 justify-content-end mb-3">
+                                    <input id="searchReqInput" type="text" class="form-control" placeholder="Search company, material, location">
+                                    <select id="statusReqFilter" class="form-select w-auto">
+                                        <option value="">All Statuses</option>
+                                        <option value="Pending">Pending</option>
+                                        <option value="Accepted">Accepted</option>
+                                        <option value="Rejected">Rejected</option>
+                                    </select>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Company</th>
+                                                <th>Contact</th>
+                                                <th>Material</th>
+                                                <th>Quantity</th>
+                                                <th>Delivery</th>
+                                                <th>Budget</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="warehouseRequirementsTable"></tbody>
+                                    </table>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="rentalPane" role="tabpanel">
+                                <div class="d-flex gap-2 justify-content-end mb-3">
+                                    <input id="searchRentalInput" type="text" class="form-control" placeholder="Search farmer, commodity, location">
+                                    <select id="statusRentalFilter" class="form-select w-auto">
+                                        <option value="">All Statuses</option>
+                                        <option value="Pending">Pending</option>
+                                        <option value="Accepted">Accepted</option>
+                                        <option value="Rejected">Rejected</option>
+                                    </select>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Farmer</th>
+                                                <th>Contact</th>
+                                                <th>Area</th>
+                                                <th>Duration</th>
+                                                <th>Commodity</th>
+                                                <th>Start Date</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="warehouseRentalsTable"></tbody>
+                                    </table>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="incomePane" role="tabpanel">
+                                <div class="row g-3 mb-3 align-items-center">
+                                    <div class="col-md-6">
+                                        <div class="d-flex gap-2">
+                                            <label class="col-form-label">Rollup:</label>
+                                            <select id="incomePeriod" class="form-select w-auto">
+                                                <option value="monthly">Monthly</option>
+                                                <option value="quarterly">Quarterly</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 text-md-end">
+                                        <span class="badge bg-info">GST 18% included</span>
+                                    </div>
+                                </div>
+                                <div class="table-responsive mb-4">
+                                    <table class="table table-hover align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>Period</th>
+                                                <th>Gross (₹)</th>
+                                                <th>Commission (₹)</th>
+                                                <th>Net (₹)</th>
+                                                <th>Paid (₹)</th>
+                                                <th>Unpaid (₹)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="rentalIncomeTable"></tbody>
+                                    </table>
+                                </div>
+                                <div class="rounded-1 bg-light p-3">
+                                    <h6 class="mb-2">Upcoming Renewals (next 30 days)</h6>
+                                    <div id="upcomingRenewals" class="small"></div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Industry/Manufacturer Dashboard: Post Requirement & Notifications -->
+            <section class="bg-light pt-5 pb-5">
+                <div class="container">
+                    <div class="row g-4 mb-3 align-items-center justify-content-between">
+                        <div class="col-xl-6">
+                            <div class="subtitle wow fadeInUp">Industry / Manufacturer Dashboard</div>
+                            <h2 class="text-uppercase wow fadeInUp" data-wow-delay=".2s">Post <span class="id-color-2">Requirement</span></h2>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-7">
+                            <div class="rounded-1 bg-body p-4 shadow-soft">
+                                <form id="industryReqForm" class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Company Name</label>
+                                        <input type="text" class="form-control" name="companyName" placeholder="Company Pvt. Ltd." required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Procurement Contact</label>
+                                        <input type="text" class="form-control" name="companyContact" placeholder="Phone or Email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Raw Material Type</label>
+                                        <select class="form-select" name="materialType" required>
+                                            <option value="">Select Material</option>
+                                            <option>Rice Husk</option>
+                                            <option>Wheat Straw</option>
+                                            <option>Bagasse</option>
+                                            <option>Cotton Stalks</option>
+                                            <option>Corn Stover</option>
+                                            <option>Pulses Husk</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Required Quantity</label>
+                                        <input type="number" min="0" step="0.01" class="form-control" name="quantity" placeholder="e.g., 50" required>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">Unit</label>
+                                        <select class="form-select" name="quantityUnit">
+                                            <option>Tons</option>
+                                            <option>Quintals</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Quality Specifications</label>
+                                        <select class="form-select" name="qualitySpec" required>
+                                            <option value="">Select Quality</option>
+                                            <option>Premium</option>
+                                            <option>Standard</option>
+                                            <option>Basic</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Required Delivery Date</label>
+                                        <input type="date" class="form-control" name="deliveryDate" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Delivery Location / Address</label>
+                                        <input type="text" class="form-control" name="deliveryLocation" placeholder="City, State" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Budget Range (per unit)</label>
+                                        <input type="text" class="form-control" name="budgetRange" placeholder="e.g., ₹1200 - ₹1600 /ton">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Industry Use Case</label>
+                                        <select class="form-select" name="useCase">
+                                            <option>Biofuel</option>
+                                            <option>Packaging</option>
+                                            <option>Pharmaceuticals</option>
+                                            <option>Construction</option>
+                                            <option>Paper & Pulp</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Urgency Level</label>
+                                        <select class="form-select" name="urgency">
+                                            <option>Urgent</option>
+                                            <option>Normal</option>
+                                            <option>Flexible</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Special Requirements / Notes</label>
+                                        <textarea class="form-control" rows="3" name="notes" placeholder="Moisture %, ash content, size, certifications, logistics, etc."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Purchase Order Details</label>
+                                        <textarea class="form-control" rows="2" name="poDetails" placeholder="PO number, terms, documentation"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn-main">Submit Requirement</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="rounded-1 bg-body p-4 shadow-soft mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="mb-0">My Requirements</h5>
+                                    <select id="industryFilterStatus" class="form-select w-auto">
+                                        <option value="">All</option>
+                                        <option value="Pending">Pending</option>
+                                        <option value="Accepted">Accepted</option>
+                                        <option value="Rejected">Rejected</option>
+                                    </select>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Material</th>
+                                                <th>Qty</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="industryRequirementsTable"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="rounded-1 bg-body p-4 shadow-soft">
+                                <h5 class="mb-3">Notifications</h5>
+                                <div id="industryNotifications" class="list-group"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Industry/Manufacturer: Export Management -->
+            <section class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row g-4 mb-3 align-items-center justify-content-between">
+                        <div class="col-xl-6">
+                            <div class="subtitle wow fadeInUp">Industry / Manufacturer Dashboard</div>
+                            <h2 class="text-uppercase wow fadeInUp" data-wow-delay=".2s">Export <span class="id-color-2">Management</span></h2>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-7">
+                            <div class="rounded-1 bg-body p-4 shadow-soft">
+                                <form id="exportInitiateForm" class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Destination Country</label>
+                                        <select class="form-select" name="country" required>
+                                            <option value="">Select Country</option>
+                                            <option>United States</option>
+                                            <option>United Kingdom</option>
+                                            <option>Germany</option>
+                                            <option>France</option>
+                                            <option>Italy</option>
+                                            <option>Netherlands</option>
+                                            <option>UAE</option>
+                                            <option>Saudi Arabia</option>
+                                            <option>Japan</option>
+                                            <option>South Korea</option>
+                                            <option>Australia</option>
+                                            <option>Canada</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Export Terms</label>
+                                        <select class="form-select" name="incoterm" required>
+                                            <option value="">Select</option>
+                                            <option>FOB (Free On Board)</option>
+                                            <option>CIF (Cost, Insurance & Freight)</option>
+                                            <option>EXW (Ex Works)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Byproduct Type</label>
+                                        <input type="text" class="form-control" name="byproductType" placeholder="e.g., Rice Husk" required>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Quantity (tons)</label>
+                                        <input type="number" min="0" step="0.01" class="form-control" name="quantity" required>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Quality Grade</label>
+                                        <select class="form-select" name="qualityGrade" required>
+                                            <option>Premium</option>
+                                            <option>Standard</option>
+                                            <option>Basic</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">HS Code</label>
+                                        <input type="text" class="form-control" name="hsCode" placeholder="e.g., 1213.00" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Expected Shipment Date</label>
+                                        <input type="date" class="form-control" name="shipmentDate" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Port of Loading (India)</label>
+                                        <select class="form-select" name="pol" required>
+                                            <option>Mundra</option>
+                                            <option>Nhava Sheva (JNPT)</option>
+                                            <option>Chennai</option>
+                                            <option>Kolkata</option>
+                                            <option>Visakhapatnam</option>
+                                            <option>Cochin</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Port of Discharge</label>
+                                        <input type="text" class="form-control" name="pod" placeholder="Destination Port" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Buyer Information</label>
+                                        <input type="text" class="form-control mb-2" name="buyerCompany" placeholder="Company Name" required>
+                                        <input type="text" class="form-control mb-2" name="buyerAddress" placeholder="Address" required>
+                                        <input type="text" class="form-control mb-2" name="buyerContact" placeholder="Contact Details" required>
+                                        <input type="text" class="form-control" name="buyerLicense" placeholder="Import License Number">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Insurance Requirements</label>
+                                        <input type="text" class="form-control" name="insurance" placeholder="e.g., Marine cargo insurance">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Special Handling Instructions</label>
+                                        <input type="text" class="form-control" name="specialHandling" placeholder="e.g., Moisture protection">
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="d-flex gap-2">
+                                            <button type="submit" class="btn-main">Initiate Export</button>
+                                            <button type="button" id="btnComplianceAI" class="btn-main btn-line">AI Compliance Report</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="rounded-1 bg-body p-4 shadow-soft mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="mb-0">Export Shipments</h5>
+                                    <select id="exportFilterStatus" class="form-select w-auto">
+                                        <option value="">All</option>
+                                        <option value="Initiated">Initiated</option>
+                                        <option value="Documents Ready">Documents Ready</option>
+                                        <option value="Customs Cleared">Customs Cleared</option>
+                                        <option value="Shipped">Shipped</option>
+                                        <option value="Delivered">Delivered</option>
+                                    </select>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Country</th>
+                                                <th>Commodity</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="exportsTable"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="rounded-1 bg-body p-4 shadow-soft">
+                                <h5 class="mb-3">Export Analytics</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-sm align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>Country</th>
+                                                <th>Volume (tons)</th>
+                                                <th>Shipments</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="exportAnalyticsTable"></tbody>
+                                    </table>
+                                </div>
+                                <div class="small text-muted">GST refund/ITC claims tracked per shipment.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Farmer: Request Storage Rental & Rentals List -->
+            <section class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row g-4 mb-3 align-items-center justify-content-between">
+                        <div class="col-xl-6">
+                            <div class="subtitle wow fadeInUp">Farmer Dashboard</div>
+                            <h2 class="text-uppercase wow fadeInUp" data-wow-delay=".2s">Request <span class="id-color-2">Storage Rental</span></h2>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-7">
+                            <div class="rounded-1 bg-body p-4 shadow-soft">
+                                <form id="rentalRequestForm" class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Farmer Name</label>
+                                        <input type="text" class="form-control" name="farmerName" placeholder="Your full name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Contact</label>
+                                        <input type="text" class="form-control" name="farmerContact" placeholder="Phone or Email" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Storage Duration</label>
+                                        <input type="number" min="1" class="form-control" name="durationValue" placeholder="e.g., 3" required>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">Unit</label>
+                                        <select class="form-select" name="durationUnit">
+                                            <option>Days</option>
+                                            <option>Months</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Required Area</label>
+                                        <div class="input-group">
+                                            <input type="number" min="1" step="0.01" class="form-control" name="area" placeholder="e.g., 200" required>
+                                            <select class="form-select" name="areaUnit" style="max-width: 160px;">
+                                                <option>sq.ft</option>
+                                                <option>cubic m</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Commodity Type</label>
+                                        <input type="text" class="form-control" name="commodityType" placeholder="e.g., Wheat Straw" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Commodity Quantity</label>
+                                        <input type="text" class="form-control" name="commodityQty" placeholder="e.g., 10 tons" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Expected Start Date</label>
+                                        <input type="date" class="form-control" name="startDate" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Rental Budget</label>
+                                        <input type="text" class="form-control" name="budget" placeholder="e.g., ₹15,000 /month">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Special Storage Requirements</label>
+                                        <div class="row g-2">
+                                            <div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" value="Temperature Control" name="req_temp" id="req_temp"><label class="form-check-label" for="req_temp">Temperature</label></div></div>
+                                            <div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" value="Moisture Protection" name="req_moist" id="req_moist"><label class="form-check-label" for="req_moist">Moisture</label></div></div>
+                                            <div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" value="Pest Control" name="req_pest" id="req_pest"><label class="form-check-label" for="req_pest">Pest</label></div></div>
+                                            <div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" value="Security" name="req_security" id="req_security"><label class="form-check-label" for="req_security">Security</label></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Notes</label>
+                                        <textarea class="form-control" rows="2" name="notes" placeholder="Any additional requirements"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn-main">Submit Rental Request</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="rounded-1 bg-body p-4 shadow-soft mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="mb-0">Storage Rentals</h5>
+                                    <select id="rentalFilterStatus" class="form-select w-auto">
+                                        <option value="">All</option>
+                                        <option value="Pending">Pending</option>
+                                        <option value="Accepted">Accepted</option>
+                                        <option value="Rejected">Rejected</option>
+                                    </select>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Area</th>
+                                                <th>Duration</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="farmerRentalsTable"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="rounded-1 bg-body p-4 shadow-soft">
+                                <h5 class="mb-3">Rental Invoices</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-sm align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>Invoice #</th>
+                                                <th>Amount</th>
+                                                <th>Status</th>
+                                                <th>View</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="farmerRentalInvoicesTable"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -961,6 +1655,236 @@
     <script src="js/swiper.js"></script>
     <script src="js/custom-swiper-3.js"></script>
     <script src="js/custom-marquee.js"></script>
+    <script src="gemini-config.js"></script>
+    <script src="js/stock-workflow.js"></script>
+    <script>
+    (function(){
+        if (window.BhoomiStock) {
+            window.BhoomiStock.initFarmerPage();
+            window.BhoomiStock.initWarehousePage();
+            window.BhoomiStock.initIndustryPage();
+            window.BhoomiStock.initWarehouseRequirements();
+            window.BhoomiStock.initRentals();
+            window.BhoomiStock.initWarehouseRentals();
+            window.BhoomiStock.initIncome();
+            window.BhoomiStock.initExport();
+        }
+    })();
+    </script>
+
+    <!-- Modals: Confirm Submit -->
+    <div class="modal fade" id="confirmSubmitModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Confirm Stock Submission</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Submit this stock listing for warehouse review?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="confirmSubmitBtn" class="btn btn-primary">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Accept -->
+    <div class="modal fade" id="acceptModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Accept & Invite</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+                <label class="form-label">Warehouse Contact Details</label>
+                <input type="text" id="acceptContactDetails" class="form-control" placeholder="Name, phone, address, etc.">
+            </div>
+            <div class="mb-0">
+                <label class="form-label">Message to Farmer (optional)</label>
+                <textarea id="acceptMessage" class="form-control" rows="3" placeholder="Pickup schedule, documentation, next steps..."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="confirmAcceptBtn" class="btn btn-success">Accept & Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Reject -->
+    <div class="modal fade" id="rejectModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Reject Request</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label">Reason (optional)</label>
+            <textarea id="rejectReason" class="form-control" rows="3" placeholder="Quality, quantity mismatch, logistics, etc."></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="confirmRejectBtn" class="btn btn-danger">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Reapply -->
+    <div class="modal fade" id="confirmReapplyModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Reapply Submission</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Create a new submission based on this request?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="confirmReapplyBtn" class="btn btn-primary">Reapply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals for Industry Requirements -->
+    <div class="modal fade" id="confirmIndustrySubmitModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Confirm Requirement Submission</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Submit this raw material requirement to warehouses?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="confirmIndustrySubmitBtn" class="btn btn-primary">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals: Storage Rentals Accept/Reject and Invoice -->
+    <div class="modal fade" id="acceptRentalModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Accept & Quote Storage Rental</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+                <label class="form-label">Rate (per sq.ft / month)</label>
+                <input type="number" min="0" step="0.01" id="acceptRentalRate" class="form-control" placeholder="e.g., 20">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Warehouse Contact</label>
+                <input type="text" id="acceptRentalContact" class="form-control" placeholder="Name, phone, email">
+            </div>
+            <div class="mb-0">
+                <label class="form-label">Message to Farmer (optional)</label>
+                <textarea id="acceptRentalMessage" class="form-control" rows="3" placeholder="Terms, schedule, next steps..."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="acceptRentalConfirmBtn" class="btn btn-success">Accept & Send Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="rejectRentalModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Reject Storage Rental</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label">Reason (optional)</label>
+            <textarea id="rejectRentalReason" class="form-control" rows="3" placeholder="Unavailable, capacity constraints, etc."></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="rejectRentalConfirmBtn" class="btn btn-danger">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="acceptReqModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Accept & Quote Requirement</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+                <label class="form-label">Quoted Price (per unit)</label>
+                <input type="text" id="acceptReqPrice" class="form-control" placeholder="e.g., ₹1400 /ton">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Availability Timeline</label>
+                <input type="text" id="acceptReqTimeline" class="form-control" placeholder="e.g., Ready in 7 days">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Warehouse Contact Details</label>
+                <input type="text" id="acceptReqContact" class="form-control" placeholder="Name, phone, email">
+            </div>
+            <div class="mb-0">
+                <label class="form-label">Message to Company (optional)</label>
+                <textarea id="acceptReqMessage" class="form-control" rows="3" placeholder="Logistics, documentation, next steps..."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="acceptReqConfirmBtn" class="btn btn-success">Accept & Send Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="rejectReqModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Reject Requirement</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label">Reason (optional)</label>
+            <textarea id="rejectReqReason" class="form-control" rows="3" placeholder="Insufficient stock, quality mismatch, delivery constraints, etc."></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="rejectReqConfirmBtn" class="btn btn-danger">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="confirmResubmitModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Resubmit Requirement</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Create a new requirement based on this request?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="confirmResubmitBtn" class="btn btn-primary">Resubmit</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
 </body>
 

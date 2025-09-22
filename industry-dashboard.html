@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>Bhoomi — Industry / Manufacturer Dashboard</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Industry dashboard for requirements, AI compliance, and export management" name="description">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="wrapper">
+        <a href="#" id="back-to-top"></a>
+        <div id="de-loader"></div>
+        <header class="transparent">
+            <div id="topbar"><div class="container"><div class="row"><div class="col-lg-12"><div class="d-flex justify-content-between xs-hide"><div class="d-flex"><div class="topbar-widget me-3"><a href="#"><i class="icofont-clock-time"></i> Monday - Friday (08.00 AM - 10.00 PM)</a></div><div class="topbar-widget me-3"><a href="#"><i class="icofont-location-pin"></i>Pan India Coverage</a></div><div class="topbar-widget me-3"><a href="#"><i class="icofont-envelope"></i>support@bhoomi.com</a></div></div><div class="d-flex"><div class="social-icons"><a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a><a href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></a><a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a><a href="#"><i class="fa-brands fa-pinterest fa-lg"></i></a><a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a></div></div></div></div><div class="clearfix"></div></div></div>
+            <div class="container"><div class="row"><div class="col-md-12"><div class="de-flex sm-pt10"><div class="de-flex-col"><div id="logo"><a href="index.html"><img class="logo-main" src="images/white.png" alt=""><img class="logo-mobile" src="images/white.png" alt=""></a></div></div><div class="de-flex-col header-col-mid"><ul id="mainmenu"><li><a class="menu-item" href="index.html">Home</a></li><li><a class="menu-item" href="services.html">Platform Features</a></li><li><a class="menu-item" href="shop-homepage.html">Marketplace</a></li><li><a class="menu-item" href="contact.html">Contact</a></li></ul></div><div class="de-flex-col"><div class="menu_side_area"><a href="login.html" class="btn-main btn-line me-2">Switch Account</a><span id="menu-btn"></span></div><div id="btn-extra"><span></span><span></span></div></div></div></div></div></div>
+        </header>
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <!-- Industry/Manufacturer: Requirements & Export Management -->
+            <section class="bg-light pt-5 pb-5">
+                <div class="container">
+                    <div class="row g-4 mb-3 align-items-center justify-content-between"><div class="col-xl-6"><div class="subtitle wow fadeInUp">Industry / Manufacturer Dashboard</div><h2 class="text-uppercase wow fadeInUp" data-wow-delay=".2s">Post <span class="id-color-2">Requirement</span></h2></div></div>
+                    <div class="row g-4">
+                        <div class="col-lg-7"><div class="rounded-1 bg-body p-4 shadow-soft">
+                            <form id="industryReqForm" class="row g-3">
+                                <div class="col-md-6"><label class="form-label">Company Name</label><input type="text" class="form-control" name="companyName" required></div>
+                                <div class="col-md-6"><label class="form-label">Procurement Contact</label><input type="text" class="form-control" name="companyContact" required></div>
+                                <div class="col-md-6"><label class="form-label">Raw Material Type</label><select class="form-select" name="materialType" required><option value="">Select Material</option><option>Rice Husk</option><option>Wheat Straw</option><option>Bagasse</option><option>Cotton Stalks</option><option>Corn Stover</option><option>Pulses Husk</option></select></div>
+                                <div class="col-md-4"><label class="form-label">Required Quantity</label><input type="number" min="0" step="0.01" class="form-control" name="quantity" required></div>
+                                <div class="col-md-2"><label class="form-label">Unit</label><select class="form-select" name="quantityUnit"><option>Tons</option><option>Quintals</option></select></div>
+                                <div class="col-md-6"><label class="form-label">Quality Specifications</label><select class="form-select" name="qualitySpec" required><option value="">Select Quality</option><option>Premium</option><option>Standard</option><option>Basic</option></select></div>
+                                <div class="col-md-6"><label class="form-label">Required Delivery Date</label><input type="date" class="form-control" name="deliveryDate" required></div>
+                                <div class="col-md-6"><label class="form-label">Delivery Location / Address</label><input type="text" class="form-control" name="deliveryLocation" required></div>
+                                <div class="col-md-6"><label class="form-label">Budget Range (per unit)</label><input type="text" class="form-control" name="budgetRange"></div>
+                                <div class="col-md-6"><label class="form-label">Industry Use Case</label><select class="form-select" name="useCase"><option>Biofuel</option><option>Packaging</option><option>Pharmaceuticals</option><option>Construction</option><option>Paper & Pulp</option><option>Other</option></select></div>
+                                <div class="col-md-6"><label class="form-label">Urgency Level</label><select class="form-select" name="urgency"><option>Urgent</option><option>Normal</option><option>Flexible</option></select></div>
+                                <div class="col-12"><label class="form-label">Special Requirements / Notes</label><textarea class="form-control" rows="3" name="notes"></textarea></div>
+                                <div class="col-12"><label class="form-label">Purchase Order Details</label><textarea class="form-control" rows="2" name="poDetails"></textarea></div>
+                                <div class="col-12"><button type="submit" class="btn-main">Submit Requirement</button></div>
+                            </form>
+                        </div></div>
+                        <div class="col-lg-5"><div class="rounded-1 bg-body p-4 shadow-soft mb-4"><div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0">My Requirements</h5><select id="industryFilterStatus" class="form-select w-auto"><option value="">All</option><option value="Pending">Pending</option><option value="Accepted">Accepted</option><option value="Rejected">Rejected</option></select></div><div class="table-responsive"><table class="table table-striped align-middle"><thead><tr><th>ID</th><th>Material</th><th>Qty</th><th>Status</th><th>Action</th></tr></thead><tbody id="industryRequirementsTable"></tbody></table></div></div>
+                        <div class="rounded-1 bg-body p-4 shadow-soft"><h5 class="mb-3">Notifications</h5><div id="industryNotifications" class="list-group"></div></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Export Management -->
+            <section class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row g-4 mb-3 align-items-center justify-content-between"><div class="col-xl-6"><div class="subtitle wow fadeInUp">Industry / Manufacturer Dashboard</div><h2 class="text-uppercase wow fadeInUp" data-wow-delay=".2s">Export <span class="id-color-2">Management</span></h2></div></div>
+                    <div class="row g-4">
+                        <div class="col-lg-7"><div class="rounded-1 bg-body p-4 shadow-soft">
+                            <form id="exportInitiateForm" class="row g-3">
+                                <div class="col-md-6"><label class="form-label">Destination Country</label><select class="form-select" name="country" required><option value="">Select Country</option><option>United States</option><option>United Kingdom</option><option>Germany</option><option>France</option><option>Italy</option><option>Netherlands</option><option>UAE</option><option>Saudi Arabia</option><option>Japan</option><option>South Korea</option><option>Australia</option><option>Canada</option></select></div>
+                                <div class="col-md-6"><label class="form-label">Export Terms</label><select class="form-select" name="incoterm" required><option value="">Select</option><option>FOB (Free On Board)</option><option>CIF (Cost, Insurance & Freight)</option><option>EXW (Ex Works)</option></select></div>
+                                <div class="col-md-6"><label class="form-label">Byproduct Type</label><input type="text" class="form-control" name="byproductType" required></div>
+                                <div class="col-md-3"><label class="form-label">Quantity (tons)</label><input type="number" min="0" step="0.01" class="form-control" name="quantity" required></div>
+                                <div class="col-md-3"><label class="form-label">Quality Grade</label><select class="form-select" name="qualityGrade" required><option>Premium</option><option>Standard</option><option>Basic</option></select></div>
+                                <div class="col-md-6"><label class="form-label">HS Code</label><input type="text" class="form-control" name="hsCode" required></div>
+                                <div class="col-md-6"><label class="form-label">Expected Shipment Date</label><input type="date" class="form-control" name="shipmentDate" required></div>
+                                <div class="col-md-6"><label class="form-label">Port of Loading (India)</label><select class="form-select" name="pol" required><option>Mundra</option><option>Nhava Sheva (JNPT)</option><option>Chennai</option><option>Kolkata</option><option>Visakhapatnam</option><option>Cochin</option></select></div>
+                                <div class="col-md-6"><label class="form-label">Port of Discharge</label><input type="text" class="form-control" name="pod" required></div>
+                                <div class="col-12"><label class="form-label">Buyer Information</label><input type="text" class="form-control mb-2" name="buyerCompany" placeholder="Company Name" required><input type="text" class="form-control mb-2" name="buyerAddress" placeholder="Address" required><input type="text" class="form-control mb-2" name="buyerContact" placeholder="Contact Details" required><input type="text" class="form-control" name="buyerLicense" placeholder="Import License Number"></div>
+                                <div class="col-md-6"><label class="form-label">Insurance Requirements</label><input type="text" class="form-control" name="insurance"></div>
+                                <div class="col-md-6"><label class="form-label">Special Handling Instructions</label><input type="text" class="form-control" name="specialHandling"></div>
+                                <div class="col-12"><div class="d-flex gap-2"><button type="submit" class="btn-main">Initiate Export</button><button type="button" id="btnComplianceAI" class="btn-main btn-line">AI Compliance Report</button></div></div>
+                            </form>
+                        </div></div>
+                        <div class="col-lg-5"><div class="rounded-1 bg-body p-4 shadow-soft mb-4"><div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0">Export Shipments</h5><select id="exportFilterStatus" class="form-select w-auto"><option value="">All</option><option value="Initiated">Initiated</option><option value="Documents Ready">Documents Ready</option><option value="Customs Cleared">Customs Cleared</option><option value="Shipped">Shipped</option><option value="Delivered">Delivered</option></select></div><div class="table-responsive"><table class="table table-striped align-middle"><thead><tr><th>ID</th><th>Country</th><th>Commodity</th><th>Status</th><th>Actions</th></tr></thead><tbody id="exportsTable"></tbody></table></div></div><div class="rounded-1 bg-body p-4 shadow-soft"><h5 class="mb-3">Export Analytics</h5><div class="table-responsive"><table class="table table-sm align-middle"><thead><tr><th>Country</th><th>Volume (tons)</th><th>Shipments</th></tr></thead><tbody id="exportAnalyticsTable"></tbody></table></div><div class="small text-muted">GST refund/ITC claims tracked per shipment.</div></div></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="section-dark"><div class="container relative z-2"><div class="row gx-5"><div class="col-lg-4 col-sm-6"><img src="images/white.png" class="w-150px" alt=""><div class="spacer-20"></div><p>Transform agricultural waste into revenue streams with Bhoomi.</p><div class="social-icons mb-sm-30"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div></div><div class="col-lg-4 col-sm-12 order-lg-1 order-sm-2"><div class="row"><div class="col-lg-6 col-sm-6"><div class="widget"><h5>Company</h5><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Platform Features</a></li><li><a href="projects.html">Success Stories</a></li><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div></div><div class="col-lg-6 col-sm-6"><div class="widget"><h5>Platform Features</h5><ul><li><a href="service-single.html">Inventory Management</a></li><li><a href="service-single.html">Supply Chain Tracking</a></li><li><a href="service-single.html">Legal Compliance</a></li><li><a href="service-single.html">Automated Billing</a></li><li><a href="service-single.html">Quality Assurance</a></li><li><a href="service-single.html">Logistics Coordination</a></li></ul></div></div></div></div><div class="col-lg-4 col-sm-6 order-lg-2 order-sm-1"><div class="widget"><div class="fw-bold text-white"><i class="icofont-clock-time me-2 id-color-2"></i>We're Open</div> Monday - Friday (08.00 AM - 10.00 PM)<div class="spacer-20"></div><div class="fw-bold text-white"><i class="icofont-location-pin me-2 id-color-2"></i>Service Coverage</div>Pan India<div class="spacer-20"></div><div class="fw-bold text-white"><i class="icofont-envelope me-2 id-color-2"></i>Send a Message</div>support@bhoomi.com</div></div></div></div><div class="subfooter"><div class="container"><div class="row"><div class="col-md-12"><div class="de-flex"><div class="de-flex-col">Copyright 2025 - Bhoomi Agricultural Marketplace</div><ul class="menu-simple"><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Privacy Policy</a></li></ul></div></div></div></div></div><img src="images/misc/silhuette-1-black.webp" class="abs bottom-0 op-3" alt=""></footer>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="gemini-config.js"></script>
+    <script src="js/stock-workflow.js"></script>
+    <script>
+    (function(){
+        if (window.BhoomiStock) {
+            window.BhoomiStock.initIndustryPage();
+            window.BhoomiStock.initExport();
+        }
+        var headerArea = document.querySelector('.menu_side_area');
+        if (headerArea) {
+            var btn = document.createElement('a');
+            btn.href = '#';
+            btn.className = 'btn-main ms-2';
+            btn.id = 'btn-logout';
+            btn.textContent = 'Logout';
+            headerArea.appendChild(btn);
+        }
+        document.addEventListener('click', function(e){
+            if(e.target && e.target.id==='btn-logout'){
+                e.preventDefault();
+                try { localStorage.removeItem('bhoomiUserSession'); } catch(_){ }
+                window.location.href = 'login.html';
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
+
+
