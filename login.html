@@ -418,7 +418,13 @@
                     
                     localStorage.setItem('bhoomiUserSession', JSON.stringify(userSession));
                     alert('Login successful! Redirecting to your dashboard...');
-                    window.location.href = 'dashboard.html';
+                    if (userType === 'farmer') {
+                        window.location.href = 'farmer-dashboard.html';
+                    } else if (userType === 'warehouse') {
+                        window.location.href = 'warehouse-dashboard.html';
+                    } else {
+                        window.location.href = 'industry-dashboard.html';
+                    }
                 } else {
                     alert('Invalid credentials. Please check your email and password.');
                 }
