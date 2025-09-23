@@ -169,7 +169,7 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = { GeminiAPI, GEMINI_CONFIG, geminiAPI };
 }
 
-// Make available globally for dashboard.html
+// Make available globally for dashboards
 if (typeof window !== 'undefined') {
     window.GeminiAPI = GeminiAPI;
     window.GEMINI_CONFIG = GEMINI_CONFIG;

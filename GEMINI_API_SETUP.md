@@ -38,12 +38,13 @@ const GEMINI_CONFIG = {
 <head>
     <!-- Other head elements -->
     <script src="gemini-config.js"></script>
-    <script src="dashboard.html"></script>
+    <!-- Include your specific dashboard page, e.g., manufacturer (industry) dashboard -->
+    <script src="industry-dashboard.html"></script>
 </head>
 ```
 
 ### Option B: Direct Configuration in Dashboard
-1. Open `dashboard.html`
+1. Open your dashboard page (e.g., `industry-dashboard.html` for manufacturers)
 2. Find the fallback function `fallbackGeminiCall`
 3. Replace `YOUR_GEMINI_API_KEY_HERE` with your actual API key:
 ```javascript
